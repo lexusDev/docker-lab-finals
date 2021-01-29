@@ -1,0 +1,10 @@
+version: '2'
+services:
+  mynodeapi:
+    image: nodeapi
+  myintegrator:
+    image: myintegrator
+    ports:
+      - 8253:8253
+    depends_on:
+      - mynodeapi
